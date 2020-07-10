@@ -25,17 +25,17 @@ attr_accessor :name, :artist, :genre
     self.new(name)
   end
   
-  def artist=(artist)
-    if @artist == nil
-      @artist = artist
-    else 
-      @artist = @artist
-    end 
-    if self.artist != nil
-      @artist.add_song(self)
-    end
-    @artist
-  end
+  #def artist=(artist)
+   # if @artist == nil
+    #  @artist = artist
+    #else 
+     # @artist = @artist
+    #end 
+  #  if self.artist != nil
+   #   @artist.add_song(self)
+    #end
+    #@artist
+  #end
   
  def genre=(genre)
     if @genre == nil
