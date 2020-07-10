@@ -25,7 +25,7 @@ attr_accessor :name, :artist, :genre
     self.new(name)
   end
   
-  def artist= (artist)
+  def artist=(artist)
     if @artist == nil
       @artist = artist
     else 
