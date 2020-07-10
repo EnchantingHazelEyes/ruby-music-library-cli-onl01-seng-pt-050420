@@ -41,6 +41,8 @@ attr_accessor :name, :songs, :genres
     artist = @songs.collect do |song|
       song.artist
     end
+     artist.uniq
+  end
     
 
 
