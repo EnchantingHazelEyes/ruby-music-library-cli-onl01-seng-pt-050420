@@ -37,13 +37,5 @@ attr_accessor :name, :songs, :genres
     genres.uniq
   end
   
-  def artists
-    artist = @songs.collect do |song|
-      song.artist
-    end
-     artist.uniq
-  end
-    
-
 
 end 
