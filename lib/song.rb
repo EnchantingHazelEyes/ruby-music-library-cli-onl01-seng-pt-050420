@@ -25,15 +25,30 @@ attr_accessor :name, :artist, :genre
     self.new(name)
   end
   
-  def artist=(artist)
-    @artist = artist
-    artist.add_song(self)
+ def artist=(artist)
+    if @artist == nil
+      @artist = artist
+    else
+      @artist = @artist
+    end
+    if self.artist != nil
+      @artist.add_song(self)
+    end
+    @artist
+  end
+  
+  def genre=(genre)
+    if @genre == nil
+      @genre = genre
+    else
+      @genre= @genre
+    end
+    if self.genre != nil
+      @genre.add_song(self)
+    end
+    @genre
   end
 
-  def genre=(genre)
-    @genre = genre
-    genre.songs << self unless genre.songs.include?(self)
-  end
   
   def self.create_from_filename(name)
     @@all << self.new_from_filename(name)
