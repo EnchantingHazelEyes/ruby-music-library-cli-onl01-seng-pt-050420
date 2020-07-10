@@ -53,6 +53,10 @@ attr_accessor :name, :artist, :genre
     @@all << self.new_from_filename(name)
 
   end
+  
+  def artist
+    @artist 
+  end 
 
   def self.new_from_filename(name)
     song_name = name.split(" - ")[1]
