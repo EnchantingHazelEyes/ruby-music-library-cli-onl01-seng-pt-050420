@@ -52,10 +52,9 @@ attr_accessor :name, :artist, :genre
     song_name = name.split(" - ")[1]
     artist_name = name.split(" - ")[0]
     genre_name = name.split(" - ")[2].chomp(".mp3")
-    song = self.find_or_create_by_name(song_name)
-    song.artist = Artist.find_or_create_by_name(artist_name)
-    song.genre = Genre.find_or_create_by_name(genre_name)
-    song
+    artist = Artist.find_or_create_by_name(artist_name)
+    genre = Genre.find_or_create_by_name(genre_name)
+    self.new(song_name, artist, genre)
   end   
 
 end 
