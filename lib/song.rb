@@ -32,7 +32,7 @@ attr_accessor :name, :artist, :genre
 
   def genre=(genre)
     @genre = genre
-    genre.songs << self unless genre.songs.include?(self)
+    genre.song << self unless genre.song.include?(self)
   end
   
   def self.create_from_filename(name)
